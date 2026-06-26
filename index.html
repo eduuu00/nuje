@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUJE</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="https: //fonts.googleapis.com/css2?family=Poppins: wght@300;500;700&display=swap" rel="stylesheet"/>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #0ea5e9);
+        background-size: 400% 400%;
+        animation: bg 12s ease infinite;
+        overflow: hidden;
+      }
+
+      @keyframes bg {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .container {
+        width: min(1000px, 90%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        color: #fff;
+      }
+
+      .image {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      .image img {
+        width: 320px;
+        max-width: 100%;
+        filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.35));
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .content {
+        max-width: 420px;
+        animation: fadeUp 0.9s ease;
+      }
+
+      .content h1 {
+        font-size: 58px;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        font-size: 20px;
+        opacity: 0.9;
+        line-height: 1.7;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          ransform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
+
+        .content h1 {
+          font-size: 42px;
+        }
+
+        .content p {
+          font-size: 18px;
+        }
+
+        .image img {
+          width: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="logo.png" />
+      </div>
+
+      <div class="content">
+        <h1>PREPARE-SE PARA UMA EXPERIÊNCIA INESQUECÍVEL</h1>
+      </div>
+    </div>
+  </body>
+</html>
